@@ -1,0 +1,19 @@
+n1=list(map(int,input().split()))
+n2=list(map(int,input().split()))
+i=0
+j=0
+res=[]
+while(i<len(n1) and j<len(n2)):
+    if(n1[i]<=n2[j]):
+        res.append(n1[i])
+        i+=1
+    else:
+        res.append(n2[j])
+        j+=1
+while(i<len(n1)):
+    res.append(n1[i])
+    i+=1
+while(j<len(n2)):
+    res.append(n2[j])
+    j+=1
+print(res)
